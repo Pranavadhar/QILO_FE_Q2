@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> 
+</head>
+<body>
+    <div style="text-align: center;">
+        <h1>Weather Dashboard</h1>
+    </div>
+    <div class="container">
+        <div class="cards-container">
+            <div class="card">
+                <h3>Avg Temp of Week</h3>
+                <p>25°C</p>
+            </div>
+            <div class="card">
+                <h3>Avg Rainfall of Week</h3>
+                <p>5mm</p>
+            </div>
+            <div class="card">
+                <h3>Avg Humidity of Week</h3>
+                <p>60%</p>
+            </div>
+            <div class="card">
+                <h3>Current Temp</h3>
+                <p>28°C</p>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="temperatureChart"></canvas>
+        </div>
+        <div class="notepad-container">
+            <div class="input-group">
+                <input type="text" id="noteText" placeholder="Enter note">
+                <button onclick="addNote()">Add Note</button>
+            </div>
+            <ul id="noteList">
+                <li>This is a sample note <button class="delete-btn" onclick="deleteNote(this)">Delete</button></li>
+                <li>Another sample note <button class="delete-btn" onclick="deleteNote(this)">Delete</button></li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
